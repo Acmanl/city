@@ -1,0 +1,25 @@
+// global
+$appWrapperHeight: 100vh;
+$mainContainer: calc(100% - 70px);
+// sidebar
+$menuText:#333333;
+$menuActiveText:#fff;
+$subMenuActiveText:#f4f4f5;
+$menuBg:#fff;
+$menuHover: #2952d0;
+$subMenuBg:#2952d0;
+$subMenuHover:#fff;
+$sideBarWidth: 240px;
+$topBarHeight: 70px;
+$contentHeight: calc(100% - 70px);
+
+:export {
+  menuText: $menuText;
+  menuActiveText: $menuActiveText;
+  subMenuActiveText: $subMenuActiveText;
+  menuBg: $menuBg;
+  menuHover: $menuHover;
+  subMenuBg: $subMenuBg;
+  subMenuHover: $subMenuHover;
+  sideBarWidth: $sideBarWidth;
+}

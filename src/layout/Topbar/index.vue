@@ -1,9 +1,10 @@
 <template>
-    <a-layout-header class="header">
-      <div class="logo" />
+    <a-layout-header class="top__bar">
+      <div class="top__bar__title" >
+        水资源综合管理系统
+      </div>
       <a-menu
         v-model:selectedKeys="selectedKeys1"
-        theme="dark"
         mode="horizontal"
         :style="{ lineHeight: '64px' }"
       >
@@ -26,6 +27,43 @@ export default defineComponent({
   }
 })
 </script>
-<style>
+<style lang="scss" scoped>
+.top__bar{
+  background: #1890ff;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 72px;
+    padding: 0 20px;
+  &__title{
+    font-size: 38px;
+    font-weight: bold;
+    color: #fff;
+  }
+  .ant-menu{
+    background: transparent;
+    height: 100%;
+  }
+  .ant-menu-horizontal{
+    border: none;
+  }
+  /deep/.ant-menu-item-selected{
+    background: rgba($color: #fff, $alpha: 0.2);
+    &::after{
+      border: none !important;
+    }
+
+  }
+  /deep/.ant-menu-item-active:hover{
+    background: rgba($color: #fff, $alpha: 0.2);
+
+  }
+  /deep/.ant-menu-title-content{
+    color: #fff;
+
+  }
+
+}
 
 </style>

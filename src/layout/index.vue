@@ -1,16 +1,11 @@
 <template>
-  <a-layout>
+  <a-layout class="app__wrapper">
     <Topbar></Topbar>
     <a-layout>
       <Sidebar></Sidebar>
-      <a-layout style="padding: 0 24px 24px">
-        <a-breadcrumb style="margin: 16px 0">
-          <a-breadcrumb-item>Home</a-breadcrumb-item>
-          <a-breadcrumb-item>List</a-breadcrumb-item>
-          <a-breadcrumb-item>App</a-breadcrumb-item>
-        </a-breadcrumb>
+      <a-layout >
         <a-layout-content
-          :style="{ background: '#fff', padding: '24px', margin: 0, minHeight: '280px' }"
+          class="main-container"
         >
           Content
         </a-layout-content>
@@ -37,7 +32,19 @@ export default defineComponent({
   }
 })
 </script>
-<style>
+<style lang="scss" scoped>
+@import "~@/styles/mixin.scss";
+@import "~@/styles/variables.scss";
+.app__wrapper{
+  @include clearfix;
+  position: relative;
+  height: $appWrapperHeight;
+  width: 100%;
+}
+.main-container{
+  min-height: 280px;
+
+}
 #components-layout-demo-top-side-2 .logo {
   float: left;
   width: 120px;

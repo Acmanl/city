@@ -20,7 +20,6 @@
         <template #title>
           <laptop-outlined />
           <span>
-
             subnav 2
           </span>
         </template>

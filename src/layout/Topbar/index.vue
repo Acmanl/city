@@ -8,17 +8,26 @@
         mode="horizontal"
         :style="{ lineHeight: '64px' }"
       >
-        <a-menu-item key="1">nav 1</a-menu-item>
-        <a-menu-item key="2">nav 2</a-menu-item>
-        <a-menu-item key="3">nav 3</a-menu-item>
+        <div v-for="item in route" :key="item.path" >
+          <Link :to="item.path">
+            <a-menu-item :key="item.path">{{item.meta.title}}</a-menu-item>
+          </Link>
+        </div>
       </a-menu>
     </a-layout-header>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue'
+import Link from './../components/Link.vue'
+import { routes } from '@/router'
 export default defineComponent({
+  components: {
+    Link
+  },
   setup() {
+    const route = ref(routes)
     return {
+      route,
       selectedKeys1: ref<string[]>(['2']),
       selectedKeys2: ref<string[]>(['1']),
       collapsed: ref<boolean>(false),

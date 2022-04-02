@@ -1,29 +1,29 @@
 /**
  * @constructor
- * @description 双控管理
+ * @description 系统管理
  * @developers
 */
 import Layout from '@/layout/index.vue'
 export default [
   {
-    path: '/DoubleControl',
-    name: 'DoubleControl',
+    path: '/System',
+    name: 'System',
     component: Layout,
     meta: {
-      title: '双控管理',
+      title: '系统管理',
       icon: 'el-icon-setting',
       iconBg: '#29bf4d'
     },
-    redirect: '/DoubleControl/DoubleControlManagement',
+    redirect: '/System/index',
     children: [
       {
-        path: 'DoubleControlManagement',
-        name: 'DoubleControlManagement',
+        path: 'index',
+        name: 'index',
         meta: {
-          title: '双控管理',
+          title: '系统管理',
           icon: 'icon-menu-icon-tongyong'
         },
-        component: () => import('@/views/doubleControl/index.vue')
+        component: () => import('@/views/system/index.vue')
         // children: [
         //   {
         //     path: 'TotalWater',

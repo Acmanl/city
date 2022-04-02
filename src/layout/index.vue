@@ -7,7 +7,7 @@
         <a-layout-content
           class="main-container"
         >
-          Content
+          <AppMain></AppMain>
         </a-layout-content>
       </a-layout>
     </a-layout>
@@ -17,10 +17,12 @@
 import { defineComponent, ref } from 'vue'
 import Topbar from './Topbar/index.vue'
 import Sidebar from './Sidebar/index.vue'
+import AppMain from './AppMain/index.vue'
 export default defineComponent({
   components: {
     Topbar,
-    Sidebar
+    Sidebar,
+    AppMain
   },
   setup() {
     return {

@@ -14,7 +14,7 @@ export default [
       icon: 'el-icon-setting',
       iconBg: '#29bf4d'
     },
-    redirect: '/DoubleControl/DoubleControlManagement',
+    redirect: '/DoubleControl/DoubleControlManagement/TotalWater',
     children: [
       {
         path: 'DoubleControlManagement',
@@ -23,27 +23,27 @@ export default [
           title: '双控管理',
           icon: 'icon-menu-icon-tongyong'
         },
-        component: () => import('@/views/doubleControl/index.vue')
-        // children: [
-        //   {
-        //     path: 'TotalWater',
-        //     name: 'TheckWater',
-        //     meta: {
-        //       title: '用水总量'
-        //       // icon: 'el-icon-setting'
-        //     },
-        //     component: () => import('@/views/doubleControl/doubleControlManagement/totalWater')
-        //   },
-        //   {
-        //     path: 'WaterUseEfficiency',
-        //     name: 'WaterUseEfficiency',
-        //     meta: {
-        //       title: '用水效率'
-        //       // icon: 'el-icon-setting'
-        //     },
-        //     component: () => import('@/views/doubleControl/doubleControlManagement/waterUseEfficiency')
-        //   }
-        // ]
+        component: () => import('@/views/doubleControl/index.vue'),
+        children: [
+          {
+            path: 'TotalWater',
+            name: 'TotalWater',
+            meta: {
+              title: '用水总量'
+              // icon: 'el-icon-setting'
+            },
+            component: () => import('@/views/doubleControl/doubleControlManagement/totalWater.vue')
+          },
+          {
+            path: 'WaterUseEfficiency',
+            name: 'WaterUseEfficiency',
+            meta: {
+              title: '用水效率'
+              // icon: 'el-icon-setting'
+            },
+            component: () => import('@/views/doubleControl/doubleControlManagement/waterUseEfficiency.vue')
+          }
+        ]
       }
     ]
   }

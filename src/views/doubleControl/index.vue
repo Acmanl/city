@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>双控管理</h1>
-  </div>
+  <router-view v-slot="{ Component }">
+    <component :is="Component" />
+  </router-view>
 </template>
